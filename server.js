@@ -62,6 +62,8 @@ const corsOptions = {
 app.use(cors(corsOptions));
 app.use(express.json());
 
+app.use('/imgs', express.static(path.join(__dirname, 'imgs')));
+
 const checkAuth = (req, res, next) => {
     // Pega o token do cabeçalho 'Authorization'
     const authHeader = req.headers.authorization;
