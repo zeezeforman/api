@@ -60,9 +60,7 @@ const corsOptions = {
 };
 
 app.use(cors(corsOptions));
-
-app.use(cors(corsOptions));
-
+app.use(express.json());
 
 const checkAuth = (req, res, next) => {
     // Pega o token do cabeçalho 'Authorization'
